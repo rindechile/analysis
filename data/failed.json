@@ -299,8 +299,20 @@
       "error": "Scraper failed: Command failed: pnpm tsx /home/runner/work/analysis/analysis/docs/scraper-single.ts \"1048-197-AG25\"",
       "attempts": 1,
       "lastAttempt": "2025-12-15T05:26:43.837Z"
+    },
+    {
+      "code": "1048-20-AG25",
+      "error": "Scraper failed: Command failed: pnpm tsx /home/runner/work/analysis/analysis/docs/scraper-single.ts \"1048-20-AG25\"",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T06:31:47.488Z"
+    },
+    {
+      "code": "1048-200-AG25",
+      "error": "Scraper failed: Command failed: pnpm tsx /home/runner/work/analysis/analysis/docs/scraper-single.ts \"1048-200-AG25\"",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T06:31:52.270Z"
     }
   ],
-  "totalFailed": 50,
-  "lastUpdated": "2025-12-15T05:26:43.837Z"
+  "totalFailed": 52,
+  "lastUpdated": "2025-12-15T06:31:52.270Z"
 }
