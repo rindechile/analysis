@@ -1,0 +1,14 @@
+# Downloaded PDFs (can be very large)
+downloads/
+
+# Checkpoint and progress files
+checkpoint.json
+download-manifest.json
+
+# Test files
+test-*.csv
+debug-*.ts
+*.bak
+
+# Temporary files
+*.log

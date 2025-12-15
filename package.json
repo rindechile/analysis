@@ -1,0 +1,24 @@
+{
+  "name": "rinde-chile-analysis",
+  "version": "1.0.0",
+  "description": "Analysis project for Chilean public procurement data",
+  "type": "module",
+  "scripts": {
+    "scrape": "tsx docs/scrape-documents.ts",
+    "scrape:fresh": "tsx docs/scrape-documents.ts --fresh",
+    "scrape:test": "tsx docs/scrape-documents.ts --test=10",
+    "scrape:retry": "tsx docs/scrape-documents.ts --retry"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.49.0",
+    "p-limit": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
