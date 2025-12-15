@@ -180,6 +180,13 @@ async function main() {
       failedCodes.push(code);
       console.log(`✗ Failed to process ${code}`);
     }
+
+    // Add random delay between orders to avoid CloudFront detection
+    if (i < codes.length - 1) {
+      const delay = Math.floor(Math.random() * 20000) + 10000; // 10-30 seconds
+      console.log(`Waiting ${(delay/1000).toFixed(1)}s before next order...`);
+      await new Promise(resolve => setTimeout(resolve, delay));
+    }
   }
 
   // Step 3: Remove processed and failed codes from pending
