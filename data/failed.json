@@ -3035,8 +3035,20 @@
       "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1161266-618-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] No links found on page\n[DEBUG] Found 0 matching links for code 1161266-618-AG25\n[DEBUG] Page title: ERROR: The request could not be satisfied\n",
       "attempts": 1,
       "lastAttempt": "2025-12-15T17:01:30.258Z"
+    },
+    {
+      "code": "1161266-632-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1161266-632-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] No links found on page\n[DEBUG] Found 0 matching links for code 1161266-632-AG25\n[DEBUG] Page title: ERROR: The request could not be satisfied\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T17:12:51.635Z"
+    },
+    {
+      "code": "1161266-668-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1161266-668-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] No links found on page\n[DEBUG] Found 0 matching links for code 1161266-668-AG25\n[DEBUG] Page title: ERROR: The request could not be satisfied\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T17:13:06.803Z"
     }
   ],
-  "totalFailed": 506,
-  "lastUpdated": "2025-12-15T17:01:30.258Z"
+  "totalFailed": 508,
+  "lastUpdated": "2025-12-15T17:13:06.803Z"
 }
