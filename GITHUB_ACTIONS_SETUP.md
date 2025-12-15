@@ -87,13 +87,11 @@ En Google AI Studio puedes ver tus límites:
 5. Value: Tu API key de Gemini
 6. Clic en "Add secret"
 
-### Paso 2: Habilitar GitHub Actions
+### Paso 2: Verificar GitHub Actions está Habilitado
 
 1. Settings → Actions → General
-2. Workflow permissions:
-   - ✅ Selecciona "Read and write permissions"
-   - ✅ Marca "Allow GitHub Actions to create and approve pull requests"
-3. Save
+2. Verificar que "Allow all actions and reusable workflows" esté seleccionado
+3. **Nota**: Los permisos de escritura ya están configurados en los workflows (`permissions: contents: write`), no necesitas cambiar nada aquí
 
 ### Paso 3: Instalar Dependencias Localmente (Primera vez)
 
@@ -243,11 +241,18 @@ console.log('Completion:', (processed.totalProcessed / (pending.totalPending + p
 
 ### Error: "Permission denied" al hacer commit
 
-**Causa**: Workflow permissions incorrectas
+**Causa**: Permisos insuficientes para el GITHUB_TOKEN
 
 **Solución**:
-1. Settings → Actions → General
-2. Workflow permissions → "Read and write permissions"
+
+Los workflows ya tienen `permissions: contents: write` configurado. Si aún así falla:
+
+1. Verifica que Actions esté habilitado en Settings → Actions
+2. Si el repo es de una organización, verifica que la org permita workflows con permisos de escritura
+3. Como último recurso, usa un Personal Access Token (PAT):
+   - Crea un PAT en GitHub Settings → Developer settings → Personal access tokens
+   - Agrégalo como secret: `GITHUB_TOKEN_CUSTOM`
+   - Modifica el step de commit para usar: `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_CUSTOM }}`
 
 ---
 
