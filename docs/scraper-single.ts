@@ -31,7 +31,7 @@ import {
 // ============================================================================
 
 const BASE_URL = 'https://buscador.mercadopublico.cl/ordenes-de-compra';
-const PAGE_TIMEOUT = 60000; // 60 seconds
+const PAGE_TIMEOUT = 120000; // 120 seconds - increased for slow pages
 const MAX_RETRIES = 3;
 const RETRY_BASE_DELAY = 2000;
 
@@ -68,8 +68,20 @@ async function navigateToPurchaseOrder(context: BrowserContext, page: Page, code
     await link.click();
 
     const detailPage = await newPagePromise;
-    await detailPage.waitForLoadState('networkidle', { timeout: PAGE_TIMEOUT });
-    await randomSleep(1500, 2500);
+    console.error(`[DEBUG] Detail page opened, waiting for load...`);
+
+    // Try domcontentloaded first, then fall back to commit
+    try {
+      await detailPage.waitForLoadState('domcontentloaded', { timeout: 30000 });
+      console.error(`[DEBUG] DOM loaded`);
+    } catch (e) {
+      console.error(`[DEBUG] DOM timeout, trying commit state...`);
+      await detailPage.waitForLoadState('commit', { timeout: 10000 }).catch(() => {
+        console.error(`[DEBUG] Commit timeout, continuing anyway`);
+      });
+    }
+
+    await randomSleep(2000, 3000);
 
     console.error(`[DEBUG] Successfully navigated to detail page`);
     return detailPage;
