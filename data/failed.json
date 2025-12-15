@@ -3011,8 +3011,20 @@
       "error": "Scraper failed: Command failed: pnpm tsx /home/runner/work/analysis/analysis/docs/scraper-single.ts \"1134432-362-AG25\"",
       "attempts": 1,
       "lastAttempt": "2025-12-15T15:25:50.414Z"
+    },
+    {
+      "code": "1134432-60-AG25",
+      "error": "Scraper failed: Command failed: pnpm tsx /home/runner/work/analysis/analysis/docs/scraper-single.ts \"1134432-60-AG25\"",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T16:31:18.999Z"
+    },
+    {
+      "code": "1156369-12-AG25",
+      "error": "Scraper failed: Command failed: pnpm tsx /home/runner/work/analysis/analysis/docs/scraper-single.ts \"1156369-12-AG25\"",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T16:33:40.985Z"
     }
   ],
-  "totalFailed": 502,
-  "lastUpdated": "2025-12-15T15:25:50.414Z"
+  "totalFailed": 504,
+  "lastUpdated": "2025-12-15T16:33:40.985Z"
 }

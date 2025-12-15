@@ -431,8 +431,440 @@
       "processedAt": "2025-12-15T06:49:30.812Z",
       "confidence": "baja",
       "filesProcessed": 0
+    },
+    {
+      "code": "1134432-38-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:27:50.686Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-44-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:28:13.167Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-47-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:28:35.784Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-49-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:28:59.278Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-5-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:29:21.362Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-51-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:29:43.414Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-53-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:30:06.139Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-54-SE25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:30:29.496Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-57-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:30:52.056Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-58-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:31:14.340Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-63-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:31:42.111Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-74-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:32:05.192Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-88-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:32:28.116Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-91-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:32:50.731Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1134432-92-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:33:13.867Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1156369-11-SE25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:33:36.101Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1156369-13-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:34:03.120Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1156369-14-SE25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:34:25.546Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1156369-23-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:34:48.767Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-100-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:35:11.745Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-105-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:35:33.988Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-108-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:35:56.666Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-114-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:36:18.813Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-122-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:36:41.064Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-15-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:37:04.034Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-168-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:37:25.951Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-180-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:37:47.926Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-184-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:38:11.083Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-192-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:38:33.466Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-212-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:38:55.719Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-220-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:39:18.776Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-235-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:39:40.681Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-263-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:40:03.397Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-279-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:40:25.634Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-360-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:40:48.205Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-364-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:41:10.660Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-396-SE25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:41:32.799Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-413-SE25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:41:55.528Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-414-SE25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:42:17.888Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-416-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:42:40.483Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-42-SE25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:43:02.956Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-428-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:43:25.958Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-466-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:43:48.988Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-476-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:44:11.435Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-485-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:44:33.489Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-505-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:44:56.427Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-519-SE25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:45:18.248Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1161266-551-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T16:45:40.963Z",
+      "confidence": "baja",
+      "filesProcessed": 0
     }
   ],
-  "totalProcessed": 48,
-  "lastUpdated": "2025-12-15T06:49:30.813Z"
+  "totalProcessed": 96,
+  "lastUpdated": "2025-12-15T16:45:40.963Z"
 }
