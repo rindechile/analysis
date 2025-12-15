@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: rindechile-n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=${N8N_USER:-admin}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_PASSWORD:-changeme}
+      - N8N_HOST=${N8N_HOST:-localhost}
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=${N8N_PROTOCOL:-http}
+      - NODE_ENV=production
+      - WEBHOOK_URL=${WEBHOOK_URL:-http://localhost:5678/}
+      - GENERIC_TIMEZONE=${TIMEZONE:-America/Santiago}
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./downloads:/downloads:rw
+      - ./data:/data:ro
+      - ./docs:/app/scraper:ro
+      - ./node_modules:/app/node_modules:ro
+    networks:
+      - rindechile-network
+    depends_on:
+      - scraper
+
+  scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rindechile-scraper
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./downloads:/app/downloads:rw
+      - ./data:/app/data:ro
+      - ./docs:/app/docs:ro
+    networks:
+      - rindechile-network
+    # Keep container running (n8n will execute commands inside this container)
+    command: tail -f /dev/null
+
+networks:
+  rindechile-network:
+    driver: bridge
+
+volumes:
+  n8n_data:
+    driver: local
