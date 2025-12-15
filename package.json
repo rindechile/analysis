@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "playwright": "^1.49.0",
-    "p-limit": "^6.1.0"
+    "p-limit": "^6.1.0",
+    "@google/generative-ai": "^0.21.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
