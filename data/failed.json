@@ -3089,8 +3089,128 @@
       "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1165648-104-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1165648-104-AG25\n[DEBUG] Page title: ERROR: The request could not be satisfied\n",
       "attempts": 1,
       "lastAttempt": "2025-12-15T17:42:35.141Z"
+    },
+    {
+      "code": "1165648-105-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1165648-105-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1165648-105-AG25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T18:28:32.159Z"
+    },
+    {
+      "code": "1165648-15-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1165648-15-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1165648-15-AG25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T18:30:42.731Z"
+    },
+    {
+      "code": "1165649-118-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1165649-118-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 1 matching links for code 1165649-118-AG25\n[DEBUG] Navigation error: browserContext.waitForEvent: Timeout 120000ms exceeded while waiting for event \"page\"\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T18:40:54.269Z"
+    },
+    {
+      "code": "1171085-1-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1171085-1-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1171085-1-SE25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T18:46:15.061Z"
+    },
+    {
+      "code": "1171085-12-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1171085-12-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1171085-12-SE25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T18:47:45.399Z"
+    },
+    {
+      "code": "1171085-13-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1171085-13-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 1 matching links for code 1171085-13-SE25\n[DEBUG] Navigation error: browserContext.waitForEvent: Timeout 120000ms exceeded while waiting for event \"page\"\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T18:50:08.632Z"
+    },
+    {
+      "code": "1171317-12-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1171317-12-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1171317-12-SE25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T18:52:26.380Z"
+    },
+    {
+      "code": "1176144-13-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1176144-13-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 1 matching links for code 1176144-13-SE25\n[DEBUG] Navigation error: browserContext.waitForEvent: Timeout 120000ms exceeded while waiting for event \"page\"\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T18:56:38.137Z"
+    },
+    {
+      "code": "1176144-2-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1176144-2-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 1 matching links for code 1176144-2-AG25\n[DEBUG] Navigation error: browserContext.waitForEvent: Timeout 120000ms exceeded while waiting for event \"page\"\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T18:58:59.652Z"
+    },
+    {
+      "code": "1176144-4-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1176144-4-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1176144-4-AG25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T19:00:16.947Z"
+    },
+    {
+      "code": "1176144-6-TD25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1176144-6-TD25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1176144-6-TD25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T19:00:46.830Z"
+    },
+    {
+      "code": "1176144-7-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1176144-7-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1176144-7-SE25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T19:01:18.643Z"
+    },
+    {
+      "code": "1176930-1-SE25",
+      "error": "No files downloaded",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T19:02:13.246Z"
+    },
+    {
+      "code": "1176930-4-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1176930-4-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1176930-4-AG25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T19:02:34.583Z"
+    },
+    {
+      "code": "1191382-1-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1191382-1-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1191382-1-SE25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T19:03:00.684Z"
+    },
+    {
+      "code": "1191382-11-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1191382-11-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1191382-11-SE25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T19:03:30.538Z"
+    },
+    {
+      "code": "1191382-12-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1191382-12-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1191382-12-SE25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T19:03:53.505Z"
+    },
+    {
+      "code": "1191382-16-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1191382-16-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1191382-16-SE25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T19:04:14.175Z"
+    },
+    {
+      "code": "1191382-4-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1191382-4-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1191382-4-SE25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T19:04:43.705Z"
+    },
+    {
+      "code": "1191382-8-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1191382-8-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1191382-8-SE25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T19:05:02.846Z"
     }
   ],
-  "totalFailed": 515,
-  "lastUpdated": "2025-12-15T17:42:35.141Z"
+  "totalFailed": 535,
+  "lastUpdated": "2025-12-15T19:05:02.846Z"
 }

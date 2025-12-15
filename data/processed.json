@@ -890,8 +890,510 @@
       "processedAt": "2025-12-15T17:35:42.664Z",
       "confidence": "baja",
       "filesProcessed": 0
+    },
+    {
+      "code": "1165648-113-AG25",
+      "marca": "normal",
+      "items": [
+        {
+          "descripcion": "Vendajes de apósitos",
+          "cantidad": 30,
+          "precio_unitario": 3200
+        },
+        {
+          "descripcion": "Coberturas para apósitos",
+          "cantidad": 5,
+          "precio_unitario": 9785
+        },
+        {
+          "descripcion": "Protector cutáneo spray 28 ml, cramberry, Vencimiento 2027",
+          "cantidad": 12,
+          "precio_unitario": 5693
+        },
+        {
+          "descripcion": "ABSOLEM, Asociación de ácidos grasos hiperozonizados con betasitosterol, centella asiática, aloe vera y llantén inmersos en una matriz extra virgen de aceite de girasol. Vencimiento 2027",
+          "cantidad": 10,
+          "precio_unitario": 39000
+        }
+      ],
+      "total_orden": 603241,
+      "processedAt": "2025-12-15T18:29:32.738Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165648-127-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Mant. Preventivo de los 20.00 kms a vehículo patente SSKR-31",
+          "cantidad": 1,
+          "precio_unitario": 327304
+        }
+      ],
+      "total_orden": 327304,
+      "processedAt": "2025-12-15T18:30:25.864Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165648-28-SE25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Lentes de gafas",
+          "cantidad": 1,
+          "precio_unitario": 5630252
+        }
+      ],
+      "total_orden": 5630252,
+      "processedAt": "2025-12-15T18:31:35.416Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165648-4-SE25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Lentes de gafas - SUMINISTRO DE CRISTALES ÓPTICOS CON MONTAJE PARA ÓPTICA COMUNAL DEL DEPARTAMENTO DE SALUD MUNICIPAL DE LIMACHE",
+          "cantidad": 1,
+          "precio_unitario": 5630252
+        }
+      ],
+      "total_orden": 5630252,
+      "processedAt": "2025-12-15T18:32:24.365Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165648-81-SE25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Marcos de lentes",
+          "cantidad": 1,
+          "precio_unitario": 5714286
+        }
+      ],
+      "total_orden": 5714286,
+      "processedAt": "2025-12-15T18:33:15.608Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165648-82-SE25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Suministro de cristales ópticos con montaje para Óptica Municipal del Departamento de Salud Municipal de Limache",
+          "cantidad": 1,
+          "precio_unitario": 5714286
+        }
+      ],
+      "total_orden": 5714286,
+      "processedAt": "2025-12-15T18:34:01.142Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165648-95-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Servicio de copias en equipos multifuncionales y soporte técnico para el Departamento de Salud Municipal de Limache.",
+          "cantidad": 1,
+          "precio_unitario": 5714285
+        }
+      ],
+      "total_orden": 5714285,
+      "processedAt": "2025-12-15T18:34:48.682Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165648-96-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Geles o fluoruro de enjuagues",
+          "cantidad": 14,
+          "precio_unitario": 90720
+        }
+      ],
+      "total_orden": 1270080,
+      "processedAt": "2025-12-15T18:35:45.605Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165648-99-AG25",
+      "marca": "normal",
+      "items": [
+        {
+          "descripcion": "Electrodos de electroterapia o accesorios TENS + TIF EQUIPO DE ELERTCROTERAPIA CON EMS, TENS, ONDA RUSA, IF STIM PRO 4 combina TENS, EMS, Ondas rusas e Interferencial, 4 en 1. Entregando diferentes programas ajustables en tiempo y frecuencia de tratamiento. TENS – Alivio del dolor crónico muscular y articular. EMS - Modelado y fortalecimiento muscular.",
+          "cantidad": 1,
+          "precio_unitario": 183958
+        },
+        {
+          "descripcion": "Cables o alambres de plomo para electroterapia CABLE TENS, CABLES PARA EQUIPO ELECTROITERAPIA TENS, CONECTOR UNIVERSAL PIN 2MM, LARGO 1,2 MTS Cables Tens 1.2Mts de repuesto estándar para la mayoría de las unidades o equipos portátiles de electroterapia. Este cable se utiliza para conectar la corriente desde el dispositivo TENS a sus electrodos. Compatibles con; TENS, EMS. TIF, Rusas,",
+          "cantidad": 20,
+          "precio_unitario": 3285
+        },
+        {
+          "descripcion": "Cinturones con carga o kits para rehabilitación o terapia BANDA ELASTICA LOOP, RESIETCNIA MEDIA TERABAND ROJA Unidad BAnda Loop Latex 60cm - Resistencia Roja Heavy",
+          "cantidad": 8,
+          "precio_unitario": 2040
+        },
+        {
+          "descripcion": "Cinturones con carga o kits para rehabilitación o terapia BANDA ELASTICA LOOP, RESIETCNIA MEDIA FUERTE TERABAND VERDE Unidad BAnda Loop Latex 60cm - Resistencia Verde Heavy",
+          "cantidad": 8,
+          "precio_unitario": 2040
+        },
+        {
+          "descripcion": "Pesas DISCOS OLÍMPICOS GRIP 15KG Par Discos Olímpicos Grip Rubber 15kg | PROmachine",
+          "cantidad": 2,
+          "precio_unitario": 52903
+        },
+        {
+          "descripcion": "Pesas KETTLEELL FRABICADA CONA CERO DE LATA CALIDAD Y CUBIERTA CON VINILO RESISTENTE DE BASE PLANA PESO 12 KG Kettlebell de Vinilo 12kg.",
+          "cantidad": 2,
+          "precio_unitario": 28947
+        },
+        {
+          "descripcion": "Bancos de soporte de pesas RACK PARA MANUCERNAS Largo: 134 cm. Ancho: 44 cm. Alto: 101 cm. 3 REPISAS Rack para Mancuernas 3 Niveles Horizontal | HWM",
+          "cantidad": 1,
+          "precio_unitario": 246983
+        },
+        {
+          "descripcion": "Pesas de entrenamiento DISCOS OLÍMPICOS GRIP 10KG Par Discos Olímpicos Grip Rubber 10kg | PROmachine",
+          "cantidad": 2,
+          "precio_unitario": 37777
+        },
+        {
+          "descripcion": "Pesas de entrenamiento KETTLEBELL FRABICADA CONA CERO DE LATA CALIDAD Y CUBIERTA CON VINILO RESISTENTE DE BASE PLANA PESO 4 KG Kettlebell 4 kg Fitmax Material: Cemento Engomado- Color: Negro. Peso 4 kg",
+          "cantidad": 2,
+          "precio_unitario": 12561
+        },
+        {
+          "descripcion": "Aros de básquetbol ARO BASKET, DIAMETRO 45 CM Aro Basquetbol 2 KG Basketball Profesional 45 Cm con Red...",
+          "cantidad": 1,
+          "precio_unitario": 22613
+        },
+        {
+          "descripcion": "Barras con pesas MANCUNERAS Y BARRA UNIBLES 20 KG CON PESAS AJUSTABLES, Dimensiones 58 cm largo Mango ergonómico y antideslizante ANCUNERAS Y BARRA UNIBLES 20 KG CON PESAS AJUSTABLES, Dimensiones 58 cm largo Mango ergonómico y antideslizante",
+          "cantidad": 1,
+          "precio_unitario": 28289
+        }
+      ],
+      "total_orden": 844559,
+      "processedAt": "2025-12-15T18:36:35.111Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165649-106-AG25",
+      "marca": "normal",
+      "items": [
+        {
+          "descripcion": "Vehículos de transporte a granel (Reparación frenos, incluir mano de obra y repuestos originales)",
+          "cantidad": 1,
+          "precio_unitario": 1383461
+        },
+        {
+          "descripcion": "Baterías para vehículos (Mantenimiento preventivo de los 30.000 kms de vehículo patente LZRB-99)",
+          "cantidad": 1,
+          "precio_unitario": 495590
+        }
+      ],
+      "total_orden": 1879051,
+      "processedAt": "2025-12-15T18:37:32.716Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165649-112-SE25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Exámenes médicos",
+          "cantidad": 1,
+          "precio_unitario": 8253253
+        }
+      ],
+      "total_orden": 8253253,
+      "processedAt": "2025-12-15T18:38:30.263Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165649-22-AG25",
+      "marca": "normal",
+      "items": [
+        {
+          "descripcion": "Vendas o apósitos compresores Hydroclean - apósito hidroactivo con SAP y Sol. Ringer- caja x 10 unids",
+          "cantidad": 2,
+          "precio_unitario": 91000
+        },
+        {
+          "descripcion": "Vendajes de apósitos Apósito Hidrocoloide delgado 10x10cm, Hydrocoll thin. caja x 10 unidades",
+          "cantidad": 2,
+          "precio_unitario": 18900
+        },
+        {
+          "descripcion": "Bastoncillos, esponjas o apósitos de gasa quirúrgicos Aceite de ácidos grasos hiperoxigenados. 15-20ml",
+          "cantidad": 20,
+          "precio_unitario": 8900
+        }
+      ],
+      "total_orden": 397800,
+      "processedAt": "2025-12-15T18:41:38.606Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165649-29-AG25",
+      "marca": "normal",
+      "items": [
+        {
+          "descripcion": "Mantenimiento preventivo para 1 SILLON DENTAL marca: KAVO",
+          "cantidad": 1,
+          "precio_unitario": 240000
+        },
+        {
+          "descripcion": "Mantenimiento preventivo para 6 SILLONES DENTALES marca: OLSEN",
+          "cantidad": 1,
+          "precio_unitario": 1440000
+        },
+        {
+          "descripcion": "Mantenimiento preventivo para COMPRESOR de aire marca: Shulz modelo: MSV 6 (3 mantenimientos cuatrimestrales)",
+          "cantidad": 1,
+          "precio_unitario": 120000
+        }
+      ],
+      "total_orden": 1800000,
+      "processedAt": "2025-12-15T18:42:27.118Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165649-47-SE25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Exámenes médicos",
+          "cantidad": 1,
+          "precio_unitario": 7994010
+        }
+      ],
+      "total_orden": 7994010,
+      "processedAt": "2025-12-15T18:43:18.983Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165649-5-SE25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Exámenes médicos",
+          "cantidad": 1,
+          "precio_unitario": 6508117
+        }
+      ],
+      "total_orden": 6508117,
+      "processedAt": "2025-12-15T18:44:07.383Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165649-68-SE25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Exámenes médicos",
+          "cantidad": 1,
+          "precio_unitario": 6938382
+        }
+      ],
+      "total_orden": 6938382,
+      "processedAt": "2025-12-15T18:44:58.498Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1165649-89-SE25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Exámenes médicos",
+          "cantidad": 1,
+          "precio_unitario": 7630182
+        }
+      ],
+      "total_orden": 7630182,
+      "processedAt": "2025-12-15T18:45:46.815Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1171085-11-SE25",
+      "marca": "normal",
+      "items": [
+        {
+          "descripcion": "Calzado protector contra materias peligrosas",
+          "cantidad": 68,
+          "precio_unitario": 56910
+        },
+        {
+          "descripcion": "Calzado protector contra materias peligrosas",
+          "cantidad": 6,
+          "precio_unitario": 56280
+        },
+        {
+          "descripcion": "Ropa reflectante o accesorios",
+          "cantidad": 1,
+          "precio_unitario": 797702
+        }
+      ],
+      "total_orden": 5005262,
+      "processedAt": "2025-12-15T18:47:12.483Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1171085-16-TD25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Kits de reparación de cilindro hidráulico o sus componentes",
+          "cantidad": 1,
+          "precio_unitario": 10690360
+        }
+      ],
+      "total_orden": 10690360,
+      "processedAt": "2025-12-15T18:51:06.185Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1171085-17-TD25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Arriendo de 1 camión recolector con caja compactadora de 19m³. Con Conductor. Incluye alza contenedor. Incluye seguro propio y contra terceros. Incluye GPS Mantenciones (cambio de aceite, filtros, entre otros).",
+          "cantidad": 1,
+          "precio_unitario": 7500000
+        }
+      ],
+      "total_orden": 7500000,
+      "processedAt": "2025-12-15T18:52:06.609Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1176144-1-SE25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Camión volcador - SERVICIO DE ARRIENDO DE CAMION AMPLIROL +04 BATEAS DE 30 MTS3 POR UN PERIODO DE 35 DIAS CORRIDOS.",
+          "cantidad": 1,
+          "precio_unitario": 12604369
+        }
+      ],
+      "total_orden": 12604369,
+      "processedAt": "2025-12-15T18:53:23.549Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1176144-10-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Semillas o plantas de algodón: Diosma amarillo, Maceta 26 centímetros mínimo, 128 unidades. Evonymus Yema de Huevo, Bolsa 30 centímetros mínimo, 48 unidades. Verónica, Bolsa 35 centímetros mínimo, 48 unidades. Evónimo Microphylla, Maceta 11 centímetros mínimo, 96 unidades. Salvia hot lip, Maceta 17 centímetros mínimo, 48 unidades. Croposma Pink (Tono invierno), Bolsa 25 centímetros mínimo, 104 unidades. Anigozanthus anaranjado, Maceta 17 centímetros mínimo, 96 unidades.",
+          "cantidad": 1,
+          "precio_unitario": 1608000
+        }
+      ],
+      "total_orden": 1608000,
+      "processedAt": "2025-12-15T18:54:11.049Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1176144-3-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T18:59:48.470Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1195-101-SE25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T19:06:05.526Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1195-102-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T19:06:40.010Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1195-103-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T19:07:19.725Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1195-104-TD25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T19:08:10.796Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1195-105-SE25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T19:08:47.426Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1195-106-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T19:09:23.592Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1195-107-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T19:09:59.011Z",
+      "confidence": "baja",
+      "filesProcessed": 0
     }
   ],
-  "totalProcessed": 99,
-  "lastUpdated": "2025-12-15T17:35:42.666Z"
+  "totalProcessed": 129,
+  "lastUpdated": "2025-12-15T19:09:59.012Z"
 }
