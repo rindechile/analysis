@@ -3023,8 +3023,20 @@
       "error": "Scraper failed: Command failed: pnpm tsx /home/runner/work/analysis/analysis/docs/scraper-single.ts \"1156369-12-AG25\"",
       "attempts": 1,
       "lastAttempt": "2025-12-15T16:33:40.985Z"
+    },
+    {
+      "code": "1161266-609-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1161266-609-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] No links found on page\n[DEBUG] Found 0 matching links for code 1161266-609-AG25\n[DEBUG] Page title: ERROR: The request could not be satisfied\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T17:01:13.757Z"
+    },
+    {
+      "code": "1161266-618-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1161266-618-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] No links found on page\n[DEBUG] Found 0 matching links for code 1161266-618-AG25\n[DEBUG] Page title: ERROR: The request could not be satisfied\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T17:01:30.258Z"
     }
   ],
-  "totalFailed": 504,
-  "lastUpdated": "2025-12-15T16:33:40.985Z"
+  "totalFailed": 506,
+  "lastUpdated": "2025-12-15T17:01:30.258Z"
 }
