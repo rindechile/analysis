@@ -44,14 +44,9 @@ async function navigateToPurchaseOrder(context: BrowserContext, page: Page, code
     const searchUrl = `${BASE_URL}?keywords=${encodeURIComponent(code)}`;
     console.error(`[DEBUG] Navigating to: ${searchUrl}`);
 
-    await page.goto(searchUrl, { waitUntil: 'networkidle', timeout: PAGE_TIMEOUT });
+    await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: PAGE_TIMEOUT });
     console.error(`[DEBUG] Page loaded, waiting for content...`);
-    await randomSleep(3000, 5000); // Increased wait time
-
-    // Wait for any links to appear
-    await page.waitForSelector('a', { timeout: 10000 }).catch(() => {
-      console.error(`[DEBUG] No links found on page`);
-    });
+    await randomSleep(2000, 3000); // Match working scraper timing
 
     const link = page.locator(`a:has-text("${code}")`).first();
     const linkCount = await link.count();
@@ -229,6 +224,8 @@ async function processSingleCode(code: string): Promise<ScraperResult> {
       '--disable-dev-shm-usage',
       '--no-sandbox',
       '--disable-setuid-sandbox',
+      '--disable-web-security', // Match working scraper - helps bypass CloudFront checks
+      '--disable-features=IsolateOrigins,site-per-process', // Disable browser isolation fingerprinting
     ],
   });
 
@@ -237,6 +234,7 @@ async function processSingleCode(code: string): Promise<ScraperResult> {
     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     locale: 'es-CL',
     timezoneId: 'America/Santiago',
+    permissions: [], // Explicitly set empty permissions to match working scraper
     extraHTTPHeaders: {
       'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
       'Accept-Language': 'es-CL,es;q=0.9,en;q=0.8',
@@ -262,15 +260,7 @@ async function processSingleCode(code: string): Promise<ScraperResult> {
   let detailPage: Page | null = null;
 
   try {
-    // Add initial delay and homepage visit to appear more human-like
-    console.error(`[DEBUG] Visiting homepage first...`);
-    await searchPage.goto('https://www.mercadopublico.cl', {
-      waitUntil: 'domcontentloaded',
-      timeout: 30000
-    }).catch(() => {});
-    await randomSleep(3000, 5000); // Wait on homepage
-
-    // Stage 1: Navigate to purchase order
+    // Stage 1: Navigate to purchase order (direct navigation like working scraper)
     detailPage = await navigateToPurchaseOrder(context, searchPage, code);
     if (!detailPage) {
       await browser.close();
