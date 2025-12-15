@@ -35,7 +35,8 @@ export interface FileProcessResult {
 // Gemini Configuration
 // ============================================================================
 
-const GEMINI_MODEL = 'gemini-1.5-flash';
+// Use the full model name with version prefix
+const GEMINI_MODEL = 'models/gemini-1.5-flash-latest';
 
 const EXTRACTION_PROMPT = `Analiza este documento de orden de compra chilena (Mercado Público).
 
