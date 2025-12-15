@@ -100,6 +100,15 @@ async function processSingleCode(code: string): Promise<{ success: boolean; orde
     const successCount = geminiResults.filter(r => r.success).length;
     console.log(`✓ Processed ${successCount}/${geminiResults.length} files successfully`);
 
+    // Log detailed errors for failed files
+    const failedResults = geminiResults.filter(r => !r.success);
+    if (failedResults.length > 0) {
+      console.log('\nFailed files details:');
+      failedResults.forEach(result => {
+        console.log(`  - ${result.filename}: ${result.error}`);
+      });
+    }
+
     // Step 4: Compare and mark
     console.log('Step 3: Comparing data and determining marca...');
     const comparison = comparAndMark(geminiResults);

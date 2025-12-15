@@ -86,12 +86,15 @@ export async function processFile(filePath: string): Promise<FileProcessResult> 
   const filename = basename(filePath);
 
   try {
+    console.log(`  Processing file: ${filename}`);
+
     const genAI = getGeminiClient();
     const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
 
     // Read file as base64
     const fileBuffer = readFileSync(filePath);
     const base64Data = fileBuffer.toString('base64');
+    console.log(`  File size: ${(fileBuffer.length / 1024).toFixed(2)} KB`);
 
     // Determine MIME type
     const mimeType = filePath.toLowerCase().endsWith('.pdf')
@@ -102,7 +105,10 @@ export async function processFile(filePath: string): Promise<FileProcessResult> 
       ? 'image/png'
       : 'application/pdf'; // Default to PDF
 
+    console.log(`  MIME type: ${mimeType}`);
+
     // Create request
+    console.log(`  Calling Gemini API...`);
     const result = await model.generateContent([
       {
         inlineData: {
@@ -115,21 +121,25 @@ export async function processFile(filePath: string): Promise<FileProcessResult> 
 
     const response = await result.response;
     const text = response.text();
+    console.log(`  Gemini response received (${text.length} chars)`);
 
     // Parse JSON response
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (!jsonMatch) {
+      console.log(`  ✗ No JSON found. Response: ${text.substring(0, 200)}`);
       return {
         filename,
         success: false,
-        error: 'No JSON found in response',
+        error: `No JSON found in response. Got: ${text.substring(0, 100)}`,
       };
     }
 
     const data: ExtractedData = JSON.parse(jsonMatch[0]);
+    console.log(`  ✓ Parsed JSON: ${JSON.stringify(data).substring(0, 100)}...`);
 
     // Validate response
     if (!data.legible) {
+      console.log(`  ✗ Document not legible: ${data.error}`);
       return {
         filename,
         success: false,
@@ -137,16 +147,19 @@ export async function processFile(filePath: string): Promise<FileProcessResult> 
       };
     }
 
+    console.log(`  ✓ Successfully extracted ${data.items?.length || 0} items`);
     return {
       filename,
       success: true,
       data,
     };
   } catch (error) {
+    const errorMsg = error instanceof Error ? error.message : String(error);
+    console.log(`  ✗ Error: ${errorMsg}`);
     return {
       filename,
       success: false,
-      error: error instanceof Error ? error.message : String(error),
+      error: errorMsg,
     };
   }
 }
