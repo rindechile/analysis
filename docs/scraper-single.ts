@@ -262,6 +262,14 @@ async function processSingleCode(code: string): Promise<ScraperResult> {
   let detailPage: Page | null = null;
 
   try {
+    // Add initial delay and homepage visit to appear more human-like
+    console.error(`[DEBUG] Visiting homepage first...`);
+    await searchPage.goto('https://www.mercadopublico.cl', {
+      waitUntil: 'domcontentloaded',
+      timeout: 30000
+    }).catch(() => {});
+    await randomSleep(3000, 5000); // Wait on homepage
+
     // Stage 1: Navigate to purchase order
     detailPage = await navigateToPurchaseOrder(context, searchPage, code);
     if (!detailPage) {
