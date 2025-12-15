@@ -6,6 +6,7 @@
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import type { Purchase } from './csv-utils';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -25,6 +26,8 @@ export interface Checkpoint {
   lastProcessedTimestamp: string;
   totalProcessed: number;
   totalFailed: number;
+  // Runtime cache for O(1) lookups (not serialized)
+  _processedCodesSet?: Set<string>;
 }
 
 export interface DownloadResult {
@@ -40,6 +43,94 @@ export interface DownloadResult {
 // ============================================================================
 
 const CHECKPOINT_FILE = join(__dirname, 'checkpoint.json');
+const SCRAPED_CODES_FILE = join(__dirname, 'scraped-codes.json');
+
+// ============================================================================
+// Scraped Codes Registry (Permanent storage of successfully scraped codes)
+// ============================================================================
+
+export interface ScrapedCodesRegistry {
+  codes: string[];
+  lastUpdated: string;
+  totalCount: number;
+}
+
+/**
+ * Load the scraped codes registry from disk
+ * This is a permanent record of all codes that have been successfully scraped
+ */
+export function loadScrapedCodesRegistry(): ScrapedCodesRegistry {
+  if (!existsSync(SCRAPED_CODES_FILE)) {
+    return {
+      codes: [],
+      lastUpdated: new Date().toISOString(),
+      totalCount: 0,
+    };
+  }
+
+  try {
+    const content = readFileSync(SCRAPED_CODES_FILE, 'utf-8');
+    return JSON.parse(content);
+  } catch (error) {
+    console.warn('⚠️  Failed to load scraped codes registry:', error);
+    return {
+      codes: [],
+      lastUpdated: new Date().toISOString(),
+      totalCount: 0,
+    };
+  }
+}
+
+/**
+ * Save the scraped codes registry to disk
+ */
+export function saveScrapedCodesRegistry(registry: ScrapedCodesRegistry): void {
+  try {
+    registry.lastUpdated = new Date().toISOString();
+    registry.totalCount = registry.codes.length;
+    writeFileSync(SCRAPED_CODES_FILE, JSON.stringify(registry, null, 2), 'utf-8');
+  } catch (error) {
+    console.error('❌ Failed to save scraped codes registry:', error);
+  }
+}
+
+/**
+ * Add a code to the scraped codes registry
+ */
+export function addToScrapedRegistry(registry: ScrapedCodesRegistry, code: string): void {
+  if (!registry.codes.includes(code)) {
+    registry.codes.push(code);
+    registry.totalCount = registry.codes.length;
+    registry.lastUpdated = new Date().toISOString();
+  }
+}
+
+/**
+ * Check if a code has already been scraped (permanent check)
+ */
+export function isAlreadyScraped(registry: ScrapedCodesRegistry, code: string): boolean {
+  return registry.codes.includes(code);
+}
+
+/**
+ * Get codes that need to be scraped (filters out already scraped codes)
+ * Use this when new data arrives to get only the new codes
+ */
+export function getNewCodesToScrape(allCodes: string[], registry: ScrapedCodesRegistry): string[] {
+  const scrapedSet = new Set(registry.codes);
+  return allCodes.filter(code => !scrapedSet.has(code));
+}
+
+/**
+ * Convert scraped codes registry to a Set for O(1) lookups
+ */
+export function getScrapedCodesSet(registry: ScrapedCodesRegistry): Set<string> {
+  return new Set(registry.codes);
+}
+
+// ============================================================================
+// Checkpoint Management (Session-based progress tracking)
+// ============================================================================
 
 /**
  * Load checkpoint from disk or create a new one
@@ -71,11 +162,13 @@ export function loadCheckpoint(): Checkpoint {
 }
 
 /**
- * Save checkpoint to disk
+ * Save checkpoint to disk (excludes runtime Set cache)
  */
 export function saveCheckpoint(checkpoint: Checkpoint): void {
   try {
-    writeFileSync(CHECKPOINT_FILE, JSON.stringify(checkpoint, null, 2), 'utf-8');
+    // Create a copy without the Set cache for serialization
+    const { _processedCodesSet, ...checkpointToSave } = checkpoint;
+    writeFileSync(CHECKPOINT_FILE, JSON.stringify(checkpointToSave, null, 2), 'utf-8');
   } catch (error) {
     console.error('❌ Failed to save checkpoint:', error);
   }
@@ -85,8 +178,14 @@ export function saveCheckpoint(checkpoint: Checkpoint): void {
  * Mark a code as processed in the checkpoint
  */
 export function markProcessed(checkpoint: Checkpoint, code: string): void {
-  if (!checkpoint.processedCodes.includes(code)) {
+  // Initialize Set cache if needed
+  if (!checkpoint._processedCodesSet) {
+    checkpoint._processedCodesSet = new Set(checkpoint.processedCodes);
+  }
+  
+  if (!checkpoint._processedCodesSet.has(code)) {
     checkpoint.processedCodes.push(code);
+    checkpoint._processedCodesSet.add(code);
     checkpoint.totalProcessed++;
     checkpoint.lastProcessedTimestamp = new Date().toISOString();
   }
@@ -122,10 +221,14 @@ export function markFailed(
 }
 
 /**
- * Check if a code has already been processed
+ * Check if a code has already been processed (O(1) lookup)
  */
 export function isProcessed(checkpoint: Checkpoint, code: string): boolean {
-  return checkpoint.processedCodes.includes(code);
+  // Initialize Set cache if needed (lazy initialization)
+  if (!checkpoint._processedCodesSet) {
+    checkpoint._processedCodesSet = new Set(checkpoint.processedCodes);
+  }
+  return checkpoint._processedCodesSet.has(code);
 }
 
 /**
@@ -263,14 +366,17 @@ export function logProgress(
 /**
  * Log final summary
  */
-export function logSummary(checkpoint: Checkpoint, totalCodes: number): void {
+export function logSummary(checkpoint: Checkpoint, totalCodes: number, registry?: ScrapedCodesRegistry): void {
   console.log('\n' + '='.repeat(60));
   console.log('📊 SCRAPING SUMMARY');
   console.log('='.repeat(60));
-  console.log(`Total codes: ${totalCodes}`);
-  console.log(`✅ Successfully processed: ${checkpoint.totalProcessed}`);
+  console.log(`Total codes in CSV: ${totalCodes}`);
+  if (registry) {
+    console.log(`📁 Total codes in registry (all-time): ${registry.totalCount}`);
+  }
+  console.log(`✅ Successfully processed (this session): ${checkpoint.totalProcessed}`);
   console.log(`❌ Failed: ${checkpoint.totalFailed}`);
-  console.log(`⏭️  Skipped (already processed): ${checkpoint.processedCodes.length - checkpoint.totalProcessed}`);
+  console.log(`⏭️  Skipped (already scraped): ${checkpoint.processedCodes.length - checkpoint.totalProcessed}`);
   
   if (checkpoint.failedCodes.length > 0) {
     console.log('\n❌ Failed codes:');
@@ -295,17 +401,15 @@ export function isValidCode(code: string): boolean {
 }
 
 /**
- * Extract unique codes from CSV data
+ * Extract unique codes from CSV data (Purchase objects)
  */
-export function extractUniqueCodes(rows: string[][]): string[] {
+export function extractUniqueCodes(rows: Purchase[]): string[] {
   const codeSet = new Set<string>();
   
   for (const row of rows) {
-    if (row.length > 1) {
-      const code = row[1].trim(); // Column index 1 is chilecompra_code
-      if (code && isValidCode(code)) {
-        codeSet.add(code);
-      }
+    const code = row.chilecompra_code?.trim();
+    if (code && isValidCode(code)) {
+      codeSet.add(code);
     }
   }
   

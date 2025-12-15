@@ -4,7 +4,9 @@ Automated scraper to download PDF documents from Chilean public procurement webs
 
 ## Features
 
-✅ **Resumable** - Checkpoint system allows resuming interrupted scrapes  
+✅ **Incremental scraping** - Only scrapes NEW codes when data is updated weekly  
+✅ **Permanent registry** - `scraped-codes.json` tracks all-time scraped codes  
+✅ **Resumable sessions** - Checkpoint system allows resuming interrupted scrapes  
 ✅ **Rate-limited** - Randomized delays (1-3s) between requests to avoid detection  
 ✅ **Anti-detection** - Headed browser mode with realistic user agent and headers  
 ✅ **Error handling** - Automatic retry with exponential backoff (up to 3 attempts)  
@@ -18,7 +20,8 @@ docs/
 ├── scrape-documents.ts       # Main scraper script
 ├── scraper-utils.ts          # Utility functions
 ├── csv-utils.ts              # CSV parsing utilities
-├── checkpoint.json           # Auto-generated progress tracker
+├── scraped-codes.json        # PERMANENT registry of all scraped codes (all-time)
+├── checkpoint.json           # Session-based progress tracker
 ├── download-manifest.json    # JSON manifest of successful downloads
 └── downloads/                # PDF output directory
     └── {chilecompra_code}/   # One folder per purchase code
@@ -27,6 +30,20 @@ docs/
 data/
 └── purchases.csv             # Source data with purchase codes
 ```
+
+## Weekly Update Workflow
+
+When new data arrives weekly:
+
+1. **Update CSV**: Replace or append to `data/purchases.csv` with new purchase codes
+2. **Run scraper**: `pnpm run scrape` - automatically detects and scrapes only NEW codes
+3. **Review**: Check the summary to see how many new codes were processed
+
+The scraper automatically:
+- Loads `scraped-codes.json` to get all previously scraped codes
+- Compares against the CSV to find NEW codes only
+- Scrapes only the new codes
+- Updates the registry with newly scraped codes
 
 ## Usage
 

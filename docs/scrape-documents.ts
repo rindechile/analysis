@@ -46,8 +46,15 @@ import {
   logProgress,
   logSummary,
   extractUniqueCodes,
+  // Scraped codes registry (permanent storage)
+  loadScrapedCodesRegistry,
+  saveScrapedCodesRegistry,
+  addToScrapedRegistry,
+  getNewCodesToScrape,
+  getScrapedCodesSet,
   type Checkpoint,
   type DownloadResult,
+  type ScrapedCodesRegistry,
 } from './scraper-utils';
 
 // ============================================================================
@@ -391,10 +398,14 @@ async function main() {
   console.log('📥 MERCADO PÚBLICO PDF SCRAPER');
   console.log('='.repeat(60));
   
-  // Load or create checkpoint
+  // Load scraped codes registry (permanent storage of all scraped codes)
+  const registry = loadScrapedCodesRegistry();
+  logInfo(`Loaded scraped codes registry: ${registry.totalCount} codes already scraped (all-time)`);
+  
+  // Load or create checkpoint (session-based progress)
   let checkpoint: Checkpoint;
   if (args.fresh) {
-    logInfo('Starting fresh (ignoring checkpoint)');
+    logInfo('Starting fresh session (ignoring session checkpoint)');
     checkpoint = {
       processedCodes: [],
       failedCodes: [],
@@ -404,14 +415,14 @@ async function main() {
     };
   } else {
     checkpoint = loadCheckpoint();
-    logInfo(`Loaded checkpoint: ${checkpoint.processedCodes.length} codes already processed`);
+    logInfo(`Loaded session checkpoint: ${checkpoint.processedCodes.length} codes processed this session`);
   }
 
   // Load purchase data
   logInfo(`Reading purchase data from CSV: ${CSV_PATH}`);
   const rows = parseCsv(CSV_PATH);
   const allCodes = extractUniqueCodes(rows);
-  logInfo(`Found ${allCodes.length} unique chilecompra codes`);
+  logInfo(`Found ${allCodes.length} unique chilecompra codes in CSV`);
 
   // Determine which codes to process
   let codesToProcess: string[];
@@ -419,11 +430,15 @@ async function main() {
     codesToProcess = getRetryableCodes(checkpoint);
     logInfo(`Retry mode: processing ${codesToProcess.length} failed codes`);
   } else if (args.test) {
-    codesToProcess = allCodes.slice(0, args.test);
-    logInfo(`Test mode: processing first ${args.test} codes`);
+    // In test mode, still filter out already scraped codes
+    const newCodes = getNewCodesToScrape(allCodes, registry);
+    codesToProcess = newCodes.slice(0, args.test);
+    logInfo(`Test mode: processing first ${args.test} NEW codes (${allCodes.length - newCodes.length} already scraped)`);
   } else {
-    codesToProcess = allCodes.filter((code) => !isProcessed(checkpoint, code));
-    logInfo(`Processing ${codesToProcess.length} remaining codes`);
+    // Filter out codes that are already in the permanent registry
+    codesToProcess = getNewCodesToScrape(allCodes, registry);
+    logInfo(`Found ${allCodes.length - codesToProcess.length} codes already in registry`);
+    logInfo(`Processing ${codesToProcess.length} NEW codes`);
   }
 
   if (codesToProcess.length === 0) {
@@ -475,9 +490,9 @@ async function main() {
   const results = await Promise.all(
     codesToProcess.map((code) =>
       limit(async () => {
-        // Skip if already processed (for non-fresh runs)
+        // Skip if already processed in this session (for non-fresh runs)
         if (!args.fresh && isProcessed(checkpoint, code)) {
-          logSkip(`Already processed: ${code}`);
+          logSkip(`Already processed in this session: ${code}`);
           return null;
         }
 
@@ -488,6 +503,8 @@ async function main() {
         if (result.success) {
           succeededCount++;
           markProcessed(checkpoint, code);
+          // Add to permanent registry
+          addToScrapedRegistry(registry, code);
           logSuccess(`[${processedCount}/${codesToProcess.length}] ${code}: ${result.pdfCount} PDFs`);
         } else {
           failedCount++;
@@ -495,9 +512,10 @@ async function main() {
           logError(`[${processedCount}/${codesToProcess.length}] ${code}: ${result.error}`);
         }
 
-        // Save checkpoint every 10 codes
+        // Save checkpoint and registry every 10 codes
         if (processedCount % 10 === 0) {
           saveCheckpoint(checkpoint);
+          saveScrapedCodesRegistry(registry);
           logProgress(processedCount, codesToProcess.length, succeededCount, failedCount);
         }
 
@@ -506,15 +524,16 @@ async function main() {
     )
   );
 
-  // Final checkpoint save
+  // Final saves
   saveCheckpoint(checkpoint);
+  saveScrapedCodesRegistry(registry);
 
   // Close browser
   await context.close();
   await browser.close();
 
   // Print summary
-  logSummary(checkpoint, allCodes.length);
+  logSummary(checkpoint, allCodes.length, registry);
 
   // Generate manifest
   const manifest = results.filter((r) => r !== null && r.success);
