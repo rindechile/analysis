@@ -881,8 +881,17 @@
       "processedAt": "2025-12-15T17:10:14.280Z",
       "confidence": "baja",
       "filesProcessed": 0
+    },
+    {
+      "code": "1161266-80-SE25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-15T17:35:42.664Z",
+      "confidence": "baja",
+      "filesProcessed": 0
     }
   ],
-  "totalProcessed": 98,
-  "lastUpdated": "2025-12-15T17:10:14.281Z"
+  "totalProcessed": 99,
+  "lastUpdated": "2025-12-15T17:35:42.666Z"
 }

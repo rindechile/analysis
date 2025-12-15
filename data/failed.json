@@ -3071,8 +3071,14 @@
       "error": "Scraper failed: [DEBUG] Visiting homepage first...\n[DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1161266-706-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] No links found on page\n[DEBUG] Found 0 matching links for code 1161266-706-AG25\n[DEBUG] Page title: ERROR: The request could not be satisfied\n",
       "attempts": 1,
       "lastAttempt": "2025-12-15T17:26:53.636Z"
+    },
+    {
+      "code": "1161266-9-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1161266-9-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 1 matching links for code 1161266-9-AG25\n[DEBUG] Navigation error: browserContext.waitForEvent: Timeout 120000ms exceeded while waiting for event \"page\"\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-15T17:38:00.602Z"
     }
   ],
-  "totalFailed": 512,
-  "lastUpdated": "2025-12-15T17:26:53.636Z"
+  "totalFailed": 513,
+  "lastUpdated": "2025-12-15T17:38:00.602Z"
 }
