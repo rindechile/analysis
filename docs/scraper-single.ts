@@ -42,14 +42,25 @@ const RETRY_BASE_DELAY = 2000;
 async function navigateToPurchaseOrder(context: BrowserContext, page: Page, code: string): Promise<Page | null> {
   try {
     const searchUrl = `${BASE_URL}?keywords=${encodeURIComponent(code)}`;
+    console.error(`[DEBUG] Navigating to: ${searchUrl}`);
 
-    await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: PAGE_TIMEOUT });
-    await randomSleep(2000, 3000);
+    await page.goto(searchUrl, { waitUntil: 'networkidle', timeout: PAGE_TIMEOUT });
+    console.error(`[DEBUG] Page loaded, waiting for content...`);
+    await randomSleep(3000, 5000); // Increased wait time
+
+    // Wait for any links to appear
+    await page.waitForSelector('a', { timeout: 10000 }).catch(() => {
+      console.error(`[DEBUG] No links found on page`);
+    });
 
     const link = page.locator(`a:has-text("${code}")`).first();
     const linkCount = await link.count();
+    console.error(`[DEBUG] Found ${linkCount} matching links for code ${code}`);
 
     if (linkCount === 0) {
+      // Try to get page content for debugging
+      const pageTitle = await page.title();
+      console.error(`[DEBUG] Page title: ${pageTitle}`);
       return null;
     }
 
@@ -57,11 +68,13 @@ async function navigateToPurchaseOrder(context: BrowserContext, page: Page, code
     await link.click();
 
     const detailPage = await newPagePromise;
-    await detailPage.waitForLoadState('domcontentloaded', { timeout: PAGE_TIMEOUT });
-    await randomSleep(800, 1500);
+    await detailPage.waitForLoadState('networkidle', { timeout: PAGE_TIMEOUT });
+    await randomSleep(1500, 2500);
 
+    console.error(`[DEBUG] Successfully navigated to detail page`);
     return detailPage;
   } catch (error) {
+    console.error(`[DEBUG] Navigation error: ${error instanceof Error ? error.message : String(error)}`);
     return null;
   }
 }
