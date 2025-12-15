@@ -51,10 +51,23 @@ async function processSingleCode(code: string): Promise<{ success: boolean; orde
     // Step 1: Scrape files
     console.log('Step 1: Scraping files...');
     const scraperCommand = `pnpm tsx ${SCRAPER_PATH} "${code}"`;
-    const scraperOutput = execSync(scraperCommand, {
-      encoding: 'utf-8',
-      stdio: ['ignore', 'pipe', 'pipe'],
-    });
+    console.log(`Executing: ${scraperCommand}`);
+
+    let scraperOutput: string;
+    try {
+      scraperOutput = execSync(scraperCommand, {
+        encoding: 'utf-8',
+        stdio: ['ignore', 'pipe', 'pipe'],
+        env: {
+          ...process.env, // Inherit all environment variables including DISPLAY from xvfb
+        },
+      });
+    } catch (execError: any) {
+      console.error('✗ Scraper execution failed');
+      console.error('STDOUT:', execError.stdout?.toString() || '(empty)');
+      console.error('STDERR:', execError.stderr?.toString() || '(empty)');
+      throw new Error(`Scraper failed: ${execError.stderr || execError.message}`);
+    }
 
     const scraperResult = JSON.parse(scraperOutput.trim());
 
