@@ -1,0 +1,79 @@
+name: Load Initial Codes
+
+on:
+  workflow_dispatch: # Manual trigger only
+
+jobs:
+  load:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Load codes from CSV
+        run: |
+          node --loader tsx --experimental-specifier-resolution=node -e "
+          import { parseCsv } from './docs/csv-utils.js';
+          import { extractUniqueCodes } from './docs/scraper-utils.js';
+          import { writeFileSync, mkdirSync } from 'fs';
+          import { join } from 'path';
+
+          const CSV_PATH = './data/purchases.csv';
+          const OUTPUT_PATH = './data/pending.json';
+
+          console.log('Reading CSV...');
+          const rows = parseCsv(CSV_PATH);
+          const codes = extractUniqueCodes(rows);
+
+          console.log(\`Found \${codes.length} unique codes\`);
+
+          const data = {
+            codes: codes,
+            lastUpdated: new Date().toISOString(),
+            totalPending: codes.length
+          };
+
+          mkdirSync('./data', { recursive: true });
+          writeFileSync(OUTPUT_PATH, JSON.stringify(data, null, 2));
+
+          console.log(\`✓ Created pending.json with \${codes.length} codes\`);
+          "
+
+      - name: Create empty processed.json
+        run: |
+          echo '{
+            "orders": [],
+            "totalProcessed": 0,
+            "lastUpdated": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+          }' > data/processed.json
+
+      - name: Create empty failed.json
+        run: |
+          echo '{
+            "codes": [],
+            "totalFailed": 0,
+            "lastUpdated": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+          }' > data/failed.json
+
+      - name: Commit data files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/pending.json data/processed.json data/failed.json
+          git commit -m "chore: initialize data files with pending codes" || echo "No changes to commit"
+          git push

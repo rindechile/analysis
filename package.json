@@ -7,14 +7,16 @@
     "scrape": "tsx docs/scrape-documents.ts",
     "scrape:fresh": "tsx docs/scrape-documents.ts --fresh",
     "scrape:test": "tsx docs/scrape-documents.ts --test=10",
-    "scrape:retry": "tsx docs/scrape-documents.ts --retry"
+    "scrape:retry": "tsx docs/scrape-documents.ts --retry",
+    "scrape:single": "tsx docs/scraper-single.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "playwright": "^1.49.0",
-    "p-limit": "^6.1.0"
+    "p-limit": "^6.1.0",
+    "@google/generative-ai": "^0.21.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",

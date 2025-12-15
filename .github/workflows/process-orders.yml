@@ -1,0 +1,59 @@
+name: Process Orders
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Every hour
+  workflow_dispatch: # Manual trigger
+    inputs:
+      batch_size:
+        description: 'Number of orders to process'
+        required: false
+        default: '50'
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300 # 5 hours max
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install chromium
+
+      - name: Install Playwright system dependencies
+        run: pnpm exec playwright install-deps chromium
+
+      - name: Install xvfb (virtual display)
+        run: sudo apt-get update && sudo apt-get install -y xvfb
+
+      - name: Process batch with xvfb
+        env:
+          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
+          BATCH_SIZE: ${{ github.event.inputs.batch_size || '50' }}
+        run: |
+          xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" \
+            pnpm tsx scripts/process-batch.ts
+
+      - name: Commit results
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/pending.json data/processed.json data/failed.json
+          git diff --staged --quiet || git commit -m "chore: update processed orders [skip ci]"
+          git push
