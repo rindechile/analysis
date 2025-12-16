@@ -8555,8 +8555,20 @@
       "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1658-2478-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1658-2478-SE25\n[DEBUG] Page title: ERROR: The request could not be satisfied\n",
       "attempts": 1,
       "lastAttempt": "2025-12-16T18:47:32.579Z"
+    },
+    {
+      "code": "1658-2481-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1658-2481-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1658-2481-AG25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T19:19:07.479Z"
+    },
+    {
+      "code": "1658-2483-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1658-2483-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1658-2483-AG25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T19:20:12.877Z"
     }
   ],
-  "totalFailed": 1426,
-  "lastUpdated": "2025-12-16T18:47:32.579Z"
+  "totalFailed": 1428,
+  "lastUpdated": "2025-12-16T19:20:12.877Z"
 }
