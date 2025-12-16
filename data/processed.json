@@ -1755,8 +1755,491 @@
       "processedAt": "2025-12-16T07:16:27.000Z",
       "confidence": "baja",
       "filesProcessed": 0
+    },
+    {
+      "code": "1437-24-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Papeles de lija",
+          "cantidad": 1,
+          "precio_unitario": 678158
+        }
+      ],
+      "total_orden": 678158,
+      "processedAt": "2025-12-16T08:27:40.999Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-251-SE25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Trazadoras de gráficos",
+          "cantidad": 1,
+          "precio_unitario": 4700000
+        }
+      ],
+      "total_orden": 4700000,
+      "processedAt": "2025-12-16T08:31:16.470Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-265-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Escobillones",
+          "cantidad": 1,
+          "precio_unitario": 927750
+        }
+      ],
+      "total_orden": 927750,
+      "processedAt": "2025-12-16T08:32:12.396Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-27-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "MATERIALES DE ASEO PARA FOLCLORE INTERNACIONAL 2025",
+          "cantidad": 1,
+          "precio_unitario": 216449
+        }
+      ],
+      "total_orden": 216449,
+      "processedAt": "2025-12-16T08:33:44.956Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-271-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Servicios de catering",
+          "cantidad": 1,
+          "precio_unitario": 2200000
+        }
+      ],
+      "total_orden": 2200000,
+      "processedAt": "2025-12-16T08:34:36.596Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-274-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Puertas de madera",
+          "cantidad": 1,
+          "precio_unitario": 3117500
+        }
+      ],
+      "total_orden": 3117500,
+      "processedAt": "2025-12-16T08:37:54.675Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-275-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:38:41.687Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-286-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:39:22.823Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-29-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:40:10.233Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-292-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Servicios de traslado de plantas, arbustos y árboles ornamentales. 15 TRASLADOS DE RESIDUOS VOLUMINOSOS, IDA Y VUELTA DESDE DIVERSOS SECTORES RURALES DE LA COMUNA HACIA VERTEDERO LA LAJA, CADA VUELTA DEBE CONTEMPLAR UNA CARGA DE 10 CUBOS DE RESIDUOS.",
+          "cantidad": 1,
+          "precio_unitario": 930000
+        }
+      ],
+      "total_orden": 930000,
+      "processedAt": "2025-12-16T08:41:02.059Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-293-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Palas - MATERIALES PARA MANTENCIÓN DE ÁREAS VERDES, SE ADJUNTA LISTA DE MATERIALES REVISAR Y VERIFICAR ** ANEXAR COTIZACION FORMAL Y DETALLADA **",
+          "cantidad": 1,
+          "precio_unitario": 1167060
+        }
+      ],
+      "total_orden": 1167060,
+      "processedAt": "2025-12-16T08:41:48.938Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-295-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Servicios de elaboración de azúcar o productos de azúcar",
+          "cantidad": 1,
+          "precio_unitario": 121000
+        }
+      ],
+      "total_orden": 121000,
+      "processedAt": "2025-12-16T08:42:38.887Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-296-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "4 ajedrez magnéticos/4 block dibujo 99 1/4 37.5 x 53.5 Cm/ 12 cartón piedra 38 x 55 Cm/ 10 pinceles número 8/10 pinceles numero 12/3 paquetes de globos de 50 unidades cada uno perlados N°12 colores surtidos/ 10 pliegos de cartulina dorada/10 pliegos de cartulina plateada/ 20 cajas de lápices de colores 12 unidades/ 10 pliegos de cartulina sólida blanca 77 x 110/5 mezclador plastico 6 divisiones/ 10 pliegos papel kraft/ 10 témperas 12 colores/ ** ANEXAR COTIZACION FORMAL Y DETALLADA**.",
+          "cantidad": 1,
+          "precio_unitario": 108924
+        }
+      ],
+      "total_orden": 108924,
+      "processedAt": "2025-12-16T08:43:36.128Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-302-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Enchufes para instalación de cámaras de seguridad",
+          "cantidad": 1,
+          "precio_unitario": 1201500
+        }
+      ],
+      "total_orden": 1201500,
+      "processedAt": "2025-12-16T08:44:25.065Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-309-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Fármacos veterinarios: Antiparasitario inyectable Bovifort 500 cc: 6 unidades, Jeringas desechables de 10 cc: 200 unidades, Agujas hipodermicas desechables 18 G x 1 1/2: 100 unidades, Agujas hipodermicas desechables 18 G x 1: 100 unidades, Vitamina ADE x 100 ml: 9 unidades",
+          "cantidad": 1,
+          "precio_unitario": 322100
+        }
+      ],
+      "total_orden": 322100,
+      "processedAt": "2025-12-16T08:45:53.357Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-31-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Escobillones",
+          "cantidad": 1,
+          "precio_unitario": 1233475
+        }
+      ],
+      "total_orden": 1233475,
+      "processedAt": "2025-12-16T08:46:33.802Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-315-TD25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Llantas y ruedas para automóviles",
+          "cantidad": 1,
+          "precio_unitario": 820000
+        }
+      ],
+      "total_orden": 820000,
+      "processedAt": "2025-12-16T08:47:26.550Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-318-AG25",
+      "marca": "normal",
+      "items": [
+        {
+          "descripcion": "Tintas CARTUCHO COLOR NEGRO MODELO HP728 300 ML COLOR NEGRO, ORIGINAL",
+          "cantidad": 2,
+          "precio_unitario": 180721
+        },
+        {
+          "descripcion": "Tintas CARTUCHO COLOR MODELO HP728 300 ML COLOR YELLOW, ORIGINAL",
+          "cantidad": 1,
+          "precio_unitario": 180721
+        },
+        {
+          "descripcion": "Tintas CARTUCHO COLOR CIAN MODELO HP728 300 ML COLOR CIAN, ORIGINAL",
+          "cantidad": 1,
+          "precio_unitario": 180721
+        },
+        {
+          "descripcion": "Tintas CARTUCHO COLOR MODELO HP728 300 ML COLOR MAGENTA, ORIGINAL",
+          "cantidad": 1,
+          "precio_unitario": 180721
+        }
+      ],
+      "total_orden": 903605,
+      "processedAt": "2025-12-16T08:48:16.664Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-319-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:49:12.495Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-340-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Cables elevadores",
+          "cantidad": 1,
+          "precio_unitario": 1178070
+        }
+      ],
+      "total_orden": 1178070,
+      "processedAt": "2025-12-16T08:50:07.685Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-356-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:51:25.395Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-370-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Vigas de madera",
+          "cantidad": 1,
+          "precio_unitario": 3832462
+        }
+      ],
+      "total_orden": 3832462,
+      "processedAt": "2025-12-16T08:52:10.088Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-378-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:53:03.495Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-384-AG25",
+      "marca": "sobreprecio",
+      "items": [
+        {
+          "descripcion": "Cinta metálica",
+          "cantidad": 1,
+          "precio_unitario": 411765
+        }
+      ],
+      "total_orden": 411765,
+      "processedAt": "2025-12-16T08:53:57.412Z",
+      "confidence": "alta",
+      "filesProcessed": 1
+    },
+    {
+      "code": "1437-396-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:54:44.747Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-4-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:55:19.308Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-403-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:56:07.380Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-407-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:56:53.352Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-418-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:57:33.211Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-423-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:58:13.617Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-427-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:59:03.390Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-43-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T08:59:53.144Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-449-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T09:01:11.654Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-460-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T09:01:54.397Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-466-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T09:03:02.607Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-478-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T09:04:03.854Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-479-TD25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T09:04:42.194Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-497-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T09:09:07.721Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-51-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T09:09:57.315Z",
+      "confidence": "baja",
+      "filesProcessed": 0
+    },
+    {
+      "code": "1437-510-AG25",
+      "marca": "falta_datos",
+      "items": [],
+      "total_orden": 0,
+      "processedAt": "2025-12-16T09:10:35.946Z",
+      "confidence": "baja",
+      "filesProcessed": 0
     }
   ],
-  "totalProcessed": 168,
-  "lastUpdated": "2025-12-16T07:16:27.001Z"
+  "totalProcessed": 208,
+  "lastUpdated": "2025-12-16T09:10:35.947Z"
 }
