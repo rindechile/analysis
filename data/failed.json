@@ -7919,8 +7919,20 @@
       "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1658-1875-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1658-1875-SE25\n[DEBUG] Page title: ERROR: The request could not be satisfied\n",
       "attempts": 1,
       "lastAttempt": "2025-12-16T14:40:34.881Z"
+    },
+    {
+      "code": "1658-1909-AG25",
+      "error": "No files downloaded",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T15:30:41.595Z"
+    },
+    {
+      "code": "1658-1963-SE25",
+      "error": "No files downloaded",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T15:45:41.677Z"
     }
   ],
-  "totalFailed": 1320,
-  "lastUpdated": "2025-12-16T14:40:34.881Z"
+  "totalFailed": 1322,
+  "lastUpdated": "2025-12-16T15:45:41.677Z"
 }
