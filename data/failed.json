@@ -5909,8 +5909,74 @@
       "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1431214-10-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1431214-10-AG25\n[DEBUG] Page title: ERROR: The request could not be satisfied\n",
       "attempts": 1,
       "lastAttempt": "2025-12-16T05:39:53.597Z"
+    },
+    {
+      "code": "1431214-4-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1431214-4-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1431214-4-AG25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T06:29:40.103Z"
+    },
+    {
+      "code": "1431598-2-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1431598-2-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1431598-2-SE25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T06:30:05.800Z"
+    },
+    {
+      "code": "1431598-3-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1431598-3-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 1 matching links for code 1431598-3-SE25\n[DEBUG] Navigation error: browserContext.waitForEvent: Timeout 120000ms exceeded while waiting for event \"page\"\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T06:32:39.006Z"
+    },
+    {
+      "code": "1431841-101-AG25",
+      "error": "No files downloaded",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T06:34:26.329Z"
+    },
+    {
+      "code": "1431841-120-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1431841-120-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 1 matching links for code 1431841-120-AG25\n[DEBUG] Navigation error: browserContext.waitForEvent: Timeout 120000ms exceeded while waiting for event \"page\"\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T06:39:08.975Z"
+    },
+    {
+      "code": "1431841-130-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1431841-130-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 1 matching links for code 1431841-130-AG25\n[DEBUG] Navigation error: browserContext.waitForEvent: Timeout 120000ms exceeded while waiting for event \"page\"\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T06:46:48.330Z"
+    },
+    {
+      "code": "1431841-140-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1431841-140-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1431841-140-AG25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T06:50:55.567Z"
+    },
+    {
+      "code": "1431841-142-SE25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1431841-142-SE25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 1 matching links for code 1431841-142-SE25\n[DEBUG] Navigation error: browserContext.waitForEvent: Timeout 120000ms exceeded while waiting for event \"page\"\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T06:54:02.349Z"
+    },
+    {
+      "code": "1431841-161-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1431841-161-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 1 matching links for code 1431841-161-AG25\n[DEBUG] Navigation error: browserContext.waitForEvent: Timeout 120000ms exceeded while waiting for event \"page\"\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T07:01:37.098Z"
+    },
+    {
+      "code": "1431841-165-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1431841-165-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1431841-165-AG25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T07:04:43.242Z"
+    },
+    {
+      "code": "1431841-167-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1431841-167-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 1 matching links for code 1431841-167-AG25\n[DEBUG] Navigation error: browserContext.waitForEvent: Timeout 120000ms exceeded while waiting for event \"page\"\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-16T07:08:01.001Z"
     }
   ],
-  "totalFailed": 985,
-  "lastUpdated": "2025-12-16T05:39:53.597Z"
+  "totalFailed": 996,
+  "lastUpdated": "2025-12-16T07:08:01.001Z"
 }
