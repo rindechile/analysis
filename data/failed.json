@@ -10367,8 +10367,14 @@
       "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1658-3422-TD25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1658-3422-TD25\n[DEBUG] Page title: ERROR: The request could not be satisfied\n",
       "attempts": 1,
       "lastAttempt": "2025-12-17T03:38:01.765Z"
+    },
+    {
+      "code": "1658-3427-AG25",
+      "error": "Scraper failed: [DEBUG] Navigating to: https://buscador.mercadopublico.cl/ordenes-de-compra?keywords=1658-3427-AG25\n[DEBUG] Page loaded, waiting for content...\n[DEBUG] Found 0 matching links for code 1658-3427-AG25\n[DEBUG] Page title: Buscador Órdenes de Compra | Mercado Público\n",
+      "attempts": 1,
+      "lastAttempt": "2025-12-17T04:32:21.758Z"
     }
   ],
-  "totalFailed": 1728,
-  "lastUpdated": "2025-12-17T03:38:01.765Z"
+  "totalFailed": 1729,
+  "lastUpdated": "2025-12-17T04:32:21.758Z"
 }
